@@ -1,4 +1,13 @@
-.App {
+@import '~antd/dist/antd.css';
+body{
+	background-color: #00004d;
+	color: white;
+}
+/* .App{
+  background-color: #00004d
+} */
+
+/* .App {
   text-align: center;
 }
 
@@ -30,4 +39,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
