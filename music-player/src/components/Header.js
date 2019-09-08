@@ -6,6 +6,35 @@ import { Input } from 'antd';
 const { Search } = Input;
 
 export default class Header extends React.Component {
+
+  state={
+    srcObj:''
+  }
+
+  callApi = (value)=>{
+     fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${value}`, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+		"x-rapidapi-key": "2779ea8e81mshcc01c202123b1b1p1324a9jsn02179dbc37f1"
+	}
+})
+.then(response =>  response.json() )
+.then(res=> {
+console.log("response is",res)
+  let songs=res
+   
+  console.log(songs);
+  this.setState({
+    srcObj:songs.data[0].preview
+  })
+})
+.catch(err => {
+	console.log(err);
+});
+  }
+
+
   render() {
     return (
         <React.Fragment>
@@ -17,10 +46,10 @@ export default class Header extends React.Component {
                    <Col  >
                              <span style={{fontSize:'18px'}}> Search The Music </span>
                             <Search
-                                        placeholder="input search text"
+                                        placeholder="Search your songs"
                                         enterButton="Search"
                                         size="large"
-                                        onSearch={value => console.log(value)}
+                                        onSearch={value=> this.callApi(value)}
                                 />
                    </Col> 
 
@@ -33,7 +62,9 @@ export default class Header extends React.Component {
 
             </Row>
 
+         <audio controls src={this.state.srcObj} >
 
+         </audio>
 
        </React.Fragment>    
     );
