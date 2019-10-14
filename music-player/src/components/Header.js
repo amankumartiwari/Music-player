@@ -26,7 +26,7 @@ console.log("response is",res)
    
   console.log(songs);
   this.setState({
-    srcObj:songs.data[0].preview
+    srcObj:songs.data[7].preview
   })
 })
 .catch(err => {
