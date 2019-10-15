@@ -3,6 +3,15 @@ body{
 	background-color: #00004d;
 	color: white;
 }
+.imgHover img:hover  {
+  z-index: 10;
+  height: 270px;
+  width : 350px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+   transition: all 1s ease;
+}
 /* .App{
   background-color: #00004d
 } */
