@@ -1,5 +1,5 @@
 import React from "react";
-import musiclogo from '../musiclogo.jpg'
+import musiclogo from '../images/musiclogo.jpg'
 import { Row,Col,Avatar } from 'antd';
 import { Input } from 'antd';
 
