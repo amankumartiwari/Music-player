@@ -12,6 +12,7 @@ export default class Header extends React.Component {
   }
 
   callApi = (value)=>{
+    
      fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${value}`, {
 	"method": "GET",
 	"headers": {
@@ -24,7 +25,7 @@ export default class Header extends React.Component {
 console.log("response is",res)
   let songs=res
    
-  console.log(songs);
+  //console.log(songs);
   this.setState({
     srcObj:songs.data[7].preview
   })
