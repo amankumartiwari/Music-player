@@ -1,14 +1,17 @@
 import React from "react";
+import {Redirect} from 'react-router-dom';
 import musiclogo from '../images/musiclogo.jpg'
+import {withRouter} from 'react-router'
 import { Row,Col,Avatar } from 'antd';
 import { Input } from 'antd';
 
 const { Search } = Input;
 
-export default class Header extends React.Component {
+ class Header extends React.Component {
 
   state={
-    srcObj:''
+    srcObj:'',
+    redirect:false 
   }
 
   callApi = (value)=>{
@@ -27,8 +30,10 @@ console.log("response is",res)
    
   //console.log(songs);
   this.setState({
-    srcObj:songs.data[7].preview
+    srcObj:songs.data[7].preview,
+    redirect:true
   })
+ // this.props.router.push('/playlist')
 })
 .catch(err => {
 	console.log(err);
@@ -37,6 +42,11 @@ console.log("response is",res)
 
 
   render() {
+
+     if(this.state.redirect){
+       return <Redirect to='/playlist' />
+     }
+
     return (
         <React.Fragment>
             <Row type="flex" justify="space-between" >
@@ -71,3 +81,8 @@ console.log("response is",res)
     );
   }
 }
+export default withRouter(Header);
+
+// Header.contextTypes = {
+//   router: React.PropTypes.object.isRequired
+// }
