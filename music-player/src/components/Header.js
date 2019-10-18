@@ -28,12 +28,11 @@ const { Search } = Input;
 console.log("response is",res)
   let songs=res
    
-  //console.log(songs);
   this.setState({
     srcObj:songs.data[7].preview,
     redirect:true
   })
- // this.props.router.push('/playlist')
+ 
 })
 .catch(err => {
 	console.log(err);
