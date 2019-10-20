@@ -7,7 +7,9 @@ export default class Playlist extends React.Component{
         return(
             <React.Fragment>
                 <Header/>
-                <Songlist/>
+               <div style={{margin: '30px 0 0 30px', width: '65%'  }}> 
+                  <Songlist/>
+               </div> 
             </React.Fragment>
         )
     }

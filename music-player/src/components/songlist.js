@@ -1,6 +1,8 @@
 import React from 'react'
-import {Row,Col} from 'antd'
+import {Row,Col,Typography,Icon} from 'antd'
 import coldplay from '../images/coldplay.jpg'
+const {Paragraph} = Typography
+
 let myobj = [
    {
        id:123,
@@ -15,10 +17,19 @@ class Songlist extends React.Component{
 
   render(){
       return(
-         <Row style={{margin: '30px 0 0 30px',backgroundColor:'white'}}>
-              <Col>
-                  <img  src={coldplay} alt="aman" height="70px" width="70px" ></img>
+         <Row type="flex" justify="middle" style={{backgroundColor: 'rgb(13, 13, 255)',height:'90px',}}>
+              <Col span={4}>
+                  <img  src={coldplay} alt="aman" height="70px" width="70px" style={{marginLeft:'30px'}} ></img>
               </Col>
+                
+                <Col span={4}  >
+                      <Paragraph style={{fontSize:'18px',marginTop:'8px',color:'white',fontWeight:'bold' } } > Aman Kumar </Paragraph>
+                      <Paragraph style={{fontSize:'14px',marginTop:'8px',color:'white' }} > Rise above hate </Paragraph>
+                </Col>
+
+                <Col>
+                    <Icon type="heart" theme="twoTone"  width="40px" height="40px" />
+                </Col>
 
          </Row>
       );
