@@ -12,6 +12,23 @@ body{
   -ms-transition: all 1s ease;
    transition: all 1s ease;
 }
+.pm img:hover{
+	opacity: 0.5;
+}
+
+.pm div{
+	display: inline-block;
+	 width: 20% ;
+}
+
+/* MAKING POPULAR ARTIST IMAGE ROUND  */
+.pm img{
+	border-radius: 50%;
+	height: 100%;
+	width: 100%;
+}
+
+
 /* .App{
   background-color: #00004d
 } */
