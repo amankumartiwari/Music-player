@@ -35,7 +35,7 @@ class PopArtist extends React.Component{
           myObj.map((val,id)=>{
               return(
                   <div   style={{margin:'0 15px', width: "200px" , height: "100px" }}>
-                       <img   src={val.imgsrc}  ></img>
+                       <img alt="Artist"  src={val.imgsrc}  ></img>
                       <figcaption style={{textAlign: 'center'}} >{val.figCaption}</figcaption>
                  </div>
               )
