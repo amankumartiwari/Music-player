@@ -16,7 +16,7 @@ render(){
                 </div>
 
                 <div style={{display:'inline-block',width:'25%',height:'100px',backgroundColor:"red"}}>
-                    {/* <Queue/> */}
+                    <Queue/>
                 </div>
 
      </React.Fragment> 
