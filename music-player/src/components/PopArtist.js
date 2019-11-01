@@ -31,7 +31,7 @@ class PopArtist extends React.Component{
 
     render(){
         return(
-            <div key="id" className="pm" style={{ width: "70%" , height: "70px",margin: "40px 0" }} >{
+            <div key="id" className="pm" style={{  height: "70px",margin: "40px 0" }} >{
           myObj.map((val,id)=>{
               return(
                   <div   style={{margin:'0 15px', width: "200px" , height: "100px" }}>

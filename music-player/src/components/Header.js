@@ -48,6 +48,7 @@ console.log("response is",res)
 
     return (
         <React.Fragment>
+          <div>
             <Row type="flex" justify="space-between" >
                   <Col   > 
                      <img src={musiclogo} alt="Music Logo" height="60px" ></img>
@@ -75,7 +76,7 @@ console.log("response is",res)
          <audio controls src={this.state.srcObj} >
 
          </audio>
-
+         </div>
        </React.Fragment>    
     );
   }
